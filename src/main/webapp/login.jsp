@@ -12,7 +12,8 @@
          <!-- <img src="image/avatar.png" class="avatar" alt=""> -->
     <div class="login">
         <h1>Login</h1>
-        <form action="loginservelet" method="post">
+         <h4 style="text-align:center; color: green; margin: auto;">${permissionmsg}</h4>
+        <form action="login" method="post">
             <label>Username</label>
                 <input type="text" name="username" autocomplete="off">
                 <label>Password</label>

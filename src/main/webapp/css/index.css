@@ -1,0 +1,364 @@
+*{
+    /* border: 1px solid red; */
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* header */
+.header{
+    height:700;
+    background-color: #10323A;
+    padding:0px 50px;
+    display:grid;
+    align-items:center;
+    grid-template-columns: auto auto auto;
+}
+.logo{
+    height:40px;
+    width:50px;
+}
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar >ul >li{
+    list-style-type: none;
+}
+.links{
+    color: white;
+    text-decoration: none;
+    margin: 2rem;
+}
+.search{
+    margin-left:000px;
+    height: 25px;
+    width: 400px;
+    border-radius: 5px;
+}
+.header_search{
+    display:flex;
+    justify-content: flex-end;
+    padding-top: 25px;
+    column-gap: 20px;
+    padding-bottom: 25px;
+    align-items: center;
+}
+.header_search a{
+    text-decoration: none;
+    
+}
+.bell{
+    font-size: 25px !important;
+}
+.log{
+    height:42px !important;
+    width:42px !important;
+}
+.bell:hover{
+    font-size:30px !important;
+}
+.log:hover{
+    font-size:30px !important;
+}
+.welcome{
+    color: white;
+    
+}
+
+
+
+
+
+/* body section */
+.index_body_container{
+    margin:70px  50px;
+}
+.bigheading_text{
+    font-size: 3rem;
+    font-weight: bold;
+    color:#183AED ;
+}
+.smallheading_text{
+    font-size: 2rem;
+    color:#183AED ;
+}
+.detail_text{
+    width:300px;
+    line-height: 1.6;
+    word-spacing: 5px;
+}
+.detail_text >span{
+    font-size:1.3rem;
+    font-weight: bold;
+}
+.hrline_body{
+    width:450px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+.explore_button{
+    background-color: #183AED;
+    color: white;
+    font-size: 1.3rem;
+    padding: 10px;
+    border-radius: 10px 15px;
+    border: 0px;
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+}
+.bx-right-arrow-alt{
+    font-size: 1.7rem;
+}
+.blue_box_container{
+    height: 700px;
+    width: 740px;
+    overflow: hidden;
+    position: absolute;
+    top: 100px;
+    right: 0px; 
+}
+.blue_box{
+    height: 500px;
+    width: 720px;
+    background-color: #183AED;
+    border-radius: 110px;
+    rotate: -20deg;
+    margin-left: 55px;
+    margin-top: 80px;
+}
+.car{
+    position: absolute;
+    top: 210px;
+    right: 60px; 
+    height: 550px;
+    width: 700px;
+}
+
+
+
+
+
+
+
+
+
+.vehicle_detail_input{
+    margin:  20px 50px;
+    border: 0px;
+    /* padding: 50px; */
+
+}
+.hrline_top{
+    margin-top: 250px;
+    margin-inline: 50px;
+}
+.hrline_bottom{
+    margin-inline: 50px;
+}
+.vehicle_detail{
+    
+}
+
+
+
+
+
+
+
+
+
+.vehicle_head{
+    font-size: 1.6rem;
+    font-weight: 750;
+}
+.vehicles{
+    margin: 50px 50px;
+}
+.vehicles_container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+}
+.vehicle_view{
+    display: grid;
+    grid-template-columns: auto auto;
+    border: 1px solid black;
+    border-radius:10px ;
+    width: 350px;
+}
+.vehicle_img_container{
+    height: 150px;
+}
+.vehicle_detail_container{
+    height: 150px;
+}
+.vehicle_image{
+    height: 150px;
+    width: 180px;
+    object-fit: cover;
+    border-radius: 10px 0px 0px 10px;
+}
+.details_view{
+    margin: 5px 5px 0px 5px;
+    line-height: 1.2;
+}
+.detail_head{
+    font-size: 0.9rem;
+    font-weight: 750;
+}
+.detail_body{
+    font-size: 0.8rem;
+}
+.detail_status{
+    font-size: 0.7rem;
+    color: gray;
+}
+.hrline_detail{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.benefits_container{
+    margin: 50px 50px 50px 50px;
+    border: 0px;
+    background-color: #f3f2f2;
+    box-shadow: 0 0 3px  #716f6f;
+    padding: 50px;
+
+}
+.benefits_heading{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 550;
+    margin-bottom: 50px;
+    color: #10323A;
+}
+
+.benefits_detail_container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.icon{
+    text-align: center;
+    font-size: 2.2rem;
+    color: #183AED;
+}
+.benefits_text{
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+
+
+/* footer */
+
+footer{
+    background-color:#10323A;
+    margin-top: 100px;
+    padding: 30px;
+}
+.footer_container{
+    height: 250px;
+    display: grid;
+    margin:50px;
+    grid-template-columns: auto auto auto;
+    gap: 5%;
+}
+.footer{
+    display: inline-block;
+    margin-left: 7%;
+}
+.footer1{
+    display:flex;
+    justify-content: end;;
+}
+.footer p{
+    color:rgb(245, 248, 233);
+    line-height: 2;
+}
+.footer_topic{
+    font-weight: bold;
+    font-size: 25px;
+}
+.footer a{
+    text-decoration: none;;
+}
+.f1,.f2,.f3,.f4{
+    transition: margin-left 1s;
+}
+.f1:hover{
+   margin-left: 20px;
+}
+.f2:hover{
+    margin-left: 20px;
+ }
+ .f3:hover{
+    margin-left: 20px;
+ }
+ .f4:hover{
+    margin-left: 20px;
+ }
+ .f5:hover{
+    margin-left: 20px;
+ }
+.socialmedia{
+    display: inline-block;
+    margin-top: 20px;
+}
+.socialmedia a{
+    text-decoration: none;
+}
+.media{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
+    margin-left: 7px;
+    font-size: 25px;
+    color: #10323A;
+}
+.fb:hover{
+    font-size:30px;
+}
+.insta:hover{
+    font-size:30px;
+}
+.twitter:hover{
+    font-size:30px;
+}
+.yt:hover{
+    font-size:30px;
+}
+.li:hover{
+    font-size:30px;
+}
+.copyright{
+    color: rgb(245, 248, 233);
+    text-align: center;
+    margin-top:20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
