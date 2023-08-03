@@ -50,6 +50,7 @@ public class loginservlet extends HttpServlet {
 		try {
 			boolean isAuthenticated = userService.validateUser(uname, password);
 			
+			
 			if(isAuthenticated) {
 				HttpSession session=request.getSession();
 				session.setAttribute("username", uname);

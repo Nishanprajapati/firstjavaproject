@@ -16,7 +16,7 @@ public class UserDao {
 	   System.out.println("connectioncheckstarted");
 	   System.out.println(con);
 	   System.out.println("connectioncheckended");
-	   String result ="Data entered Successfully";
+	   String result ="success";
 	   String sql="insert into users (first_name,second_name,username,password,confirm_password) values(?,?,?,?,?)";
 	   PreparedStatement ps;
 	try {
@@ -31,7 +31,7 @@ public class UserDao {
 	} catch (SQLException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
-		result="Data not entered";
+		result="error";
 		
 	}
        

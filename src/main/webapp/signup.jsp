@@ -9,8 +9,40 @@
     <title>sign up</title>
     <link rel="stylesheet" href="css/stylelogsign.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Lato:ital@1&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
 </head>
 <body>
+
+<%
+    String successMessage = (String) request.getAttribute("registered");
+    String errorMessage = (String) request.getAttribute("registerFailed");
+%>
+<% if (successMessage != null && !successMessage.isEmpty()) { %>
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: '<%= successMessage %>',
+            customClass: {
+                container: 'custom-text',
+                confirmButton: 'sweet-btn',
+            }
+        });
+    </script>
+<% } %>
+
+<% if (errorMessage != null && !errorMessage.isEmpty()) { %>
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: '<%= errorMessage %>',
+            customClass: {
+                container: 'custom-text',
+                confirmButton: 'sweet-btn',
+            }
+        });
+    </script>
+<% } %>
     <div class="signupbox">
             <h1>Sign Up</h1>
             <h4>It's free and only takes a minutes</h4>

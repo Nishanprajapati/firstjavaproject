@@ -1,4 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@page import="java.util.List"%>
+<%@page import="com.rideease.service.user.VendorService"%>
+<%@page import="com.rideease.model.Vendor"%>
 <%
 	response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
 	response.setHeader("Pragma", "no-cache");
@@ -25,15 +28,17 @@
  	<link rel="stylesheet" href="css/index.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/3a36052df8.js" crossorigin="anonymous"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
 </head>
 <body>
     <header class="header">
         <img src="images/logo1.jpg" alt="thisislogo" class="logo">
       <nav class="navbar">
           <ul>
-              <li><a href="index.html" class="links">Home</a></li>
-              <li><a href="lend.html" class="links">Lend</a></li>
-              <li><a href="contact.html" class="links">Contact Us</a></li>
+              <li><a href="index.jsp" class="links">Home</a></li>
+              <li><a href="lend.jsp" class="links">Lend</a></li>
+              <li><a href="contact.jsp" class="links">Contact Us</a></li>
               <li style="z-index:100"><a href="logout.jsp" class="links">Log Out</a></li>
 
           </ul>
@@ -90,19 +95,55 @@
 
 
 
+	<%
+    String successMessage = (String) request.getAttribute("successMessage");
+    String errorMessage = (String) request.getAttribute("errorMessage");
+%>
 
+<% if (successMessage != null && !successMessage.isEmpty()) { %>
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: '<%= successMessage %>',
+            customClass: {
+                container: 'custom-text',
+                confirmButton: 'sweet-btn',
+            }
+        });
+    </script>
+<% } %>
 
+<% if (errorMessage != null && !errorMessage.isEmpty()) { %>
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: '<%= errorMessage %>',
+            customClass: {
+                container: 'custom-text',
+                confirmButton: 'sweet-btn',
+            }
+        });
+    </script>
+<% } %>
+        
     <div class="vehicles">
         <span class="vehicle_head">Bikes</span>
         <hr>
         <div class="vehicles_container">
+          <%
+            //fetching list of vendors
+            VendorService vendorService=new VendorService();
+            List < Vendor > listVendors    =vendorService.getAllVendors();
+            if(!listVendors.isEmpty()){%>             
+            
+             <%for(Vendor vendor:listVendors){%> 
             <div class="vehicle_view">
                 <div class="vehicle_img_container">
-                    <img src="images/harley.jpg" alt="" class="vehicle_image">
+                    <img src="VendorImage?vendor_id=<%=vendor.getId() %>" alt="" class="vehicle_image">
                 </div>
                 <div class="vehicle_detail_container">
                     <div class="details_view">
-                        <p class="detail_head">Harley davidson</p>
+                        <p class="detail_head"><%=vendor.getName() %></p>
                         <hr class="hrline_detail">
                         <p class="detail_body">Harley Davidson livewire</p>
                         <p class="detail_body">Location:Madhyapur Thimi,Bhaktapur</p>
@@ -111,42 +152,14 @@
                         <p class="detail_status">like new</p>
                     </div>
                 </div>
-
             </div>
-            <div class="vehicle_view">
-                <div class="vehicle_img_container">
-                    <img src="images/harley.jpg" alt="" class="vehicle_image">
-                </div>
-                <div>
-                    <div class="details_view">
-                        <p class="detail_head">Harley davidson</p>
-                        <hr class="hrline_detail">
-                        <p class="detail_body">Harley Davidson livewire</p>
-                        <p class="detail_body">Location:Madhyapur Thimi,Bhaktapur</p>
-                        <p class="detail_body">Rating: 5 <i class='bx bxs-star' ></i></p>
-                        <p class="detail_body">Price:Rs 1500 /- per day</p>
-                        <p class="detail_status">like new</p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="vehicle_view">
-                <div class="vehicle_img_container">
-                    <img src="images/harley.jpg" alt="" class="vehicle_image">
-                </div>
-                <div>
-                    <div class="details_view">
-                        <p class="detail_head">Harley davidson</p>
-                        <hr class="hrline_detail">
-                        <p class="detail_body">Harley Davidson livewire</p>
-                        <p class="detail_body">Location:Madhyapur Thimi,Bhaktapur</p>
-                        <p class="detail_body">Rating: 5 <i class='bx bxs-star' ></i></p>
-                        <p class="detail_body">Price:Rs 1500 /- per day</p>
-                        <p class="detail_status">like new</p>
-                    </div>
-                </div>
-
-            </div>
+            <%}%> 
+         <%}%> 
+         
+          <%if(listVendors.isEmpty()){%>
+        <h1 style="color: red;"> List is Not Available !!!</h1>
+    <%}%>
+           
            
         </div>
         <hr>
@@ -254,10 +267,10 @@
             <div class="footer">
                 <p class="footer_topic">LINKS</p>
                 <hr color="white" width="150">
-                <a href="index.html"><p class="f1">Home</p></a>
-                <a href="lend.html"><p class="f2">lend</p></a>
-                <a href="contact.html"><p class="f3">Contact Us</p></a>
-                <a href="login.html"><p class="f4">login</p></a>
+                <a href="index.jsp"><p class="f1">Home</p></a>
+                <a href="lend.jsp"><p class="f2">lend</p></a>
+                <a href="contact.jsp"><p class="f3">Contact Us</p></a>
+                <a href="login.jsp"><p class="f4">login</p></a>
             </div>
            </div>
            <div class="footer1">

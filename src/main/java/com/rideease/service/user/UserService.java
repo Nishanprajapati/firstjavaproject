@@ -2,6 +2,10 @@ package com.rideease.service.user;
 
 import java.sql.SQLException;
 
+import javax.servlet.http.HttpSession;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 import com.rideease.dao.user.UserDao;
 import com.rideease.model.User;
 
@@ -44,6 +48,8 @@ public class UserService {
 		
 		// add session detail if user credentials are valid
 		
+		
 		return  userDao.authenticateUser(username, password);
 	}
+	
 }
