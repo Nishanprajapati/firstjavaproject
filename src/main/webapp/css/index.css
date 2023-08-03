@@ -142,12 +142,14 @@
 
 
 
-
+/*search input bar */
 
 
 .vehicle_detail_input{
     margin:  20px 50px;
-    border: 0px;
+    border: 1px solid #f5f1;
+    padding: 15px 20px 15px 50px;
+    background-color: #f5f1f1;
     /* padding: 50px; */
 
 }
@@ -159,8 +161,39 @@
     margin-inline: 50px;
 }
 .vehicle_detail{
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 15%;
     
 }
+.input_container{
+    width: 100%;
+}
+.vehicle_input_line{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /* width: 100%; */
+    /* gap: 50px; */
+}
+.form_field{
+    width: 70%;
+    height: 30px;
+    border: 1px solid;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.submit{
+    width:120px;
+    height:35px;
+    border:none;
+    border-radius: 5px;
+    background-color: #183AED;
+    color:white;
+    font-size: 18px;
+}
+
+
+
 
 
 

@@ -81,12 +81,23 @@
 
 
 
-    <hr class="hrline_top">
+       <hr class="hrline_top">
     <div class="vehicle_detail_input">
        <form action="post">
             <div class="vehicle_detail">
-                <div><span>Pickup Date:</span><input type="text"></div>
-                <div></div>
+                <div class="input_container">
+                    <div class="vehicle_input_line">
+                        <div><span>Pickup Date :</span><input type="text" class="form_field"></div>
+                        <div><span>From :&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><input type="text" class="form_field"></div>
+                    </div>
+                    <div class="vehicle_input_line">
+                        <div><span>Pickup Time: </span><input type="text" class="form_field"></div>
+                        <div><span>Dropoff Date :</span><input type="text" class="form_field"></div>
+                    </div>
+                </div>
+                <div>
+                    <input type="submit" value="Search" class="submit">
+                </div>
             </div>
        </form>
 
@@ -139,7 +150,7 @@
              <%for(Vendor vendor:listVendors){%> 
             <div class="vehicle_view">
                 <div class="vehicle_img_container">
-                    <img src="VendorImage?vendor_id=<%=vendor.getId() %>" alt="" class="vehicle_image">
+                    <a href="vehicle.jsp"><img src="VendorImage?vendor_id=<%=vendor.getId() %>" alt="" class="vehicle_image"></a>
                 </div>
                 <div class="vehicle_detail_container">
                     <div class="details_view">
