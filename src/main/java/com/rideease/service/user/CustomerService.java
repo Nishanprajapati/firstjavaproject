@@ -2,6 +2,7 @@ package com.rideease.service.user;
 
 import com.rideease.dao.user.CustomerDao;
 import com.rideease.model.Customer;
+import com.rideease.utills.EmailSender;
 
 public class CustomerService {
 	CustomerDao customerDao=new CustomerDao();
@@ -26,6 +27,10 @@ public class CustomerService {
 		//hash
 		
 		String result = customerDao.bookVehicle(customer);
+		if (result.equals("success")) {
+			
+			EmailSender.bookEmail(result);
+		}
 		
 		return result;
 	}
