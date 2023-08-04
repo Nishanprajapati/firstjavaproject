@@ -18,6 +18,7 @@
               <li><a href="index.jsp" class="links">Home</a></li>
               <li><a href="lend.jsp" class="links">Lend</a></li>
               <li><a href="contact.jsp" class="links">Contact Us</a></li>
+              <li><a href="allvehicle.jsp" class="links">All Vehicles</a></li>
               <li style="z-index:100"><a href="logout.jsp" class="links">Log Out</a></li>
 
           </ul>
@@ -50,10 +51,10 @@
      If a customer damages any part of the vehicle,
      they will be responsible for covering the cost of the damage.
 
-	<form>
 	
-    <input type="submit" value="Book Now" class="submitbutton1"  onclick="formDisplay()">
-    </form>
+	
+    <a href="customerform.jsp"><input type="submit" value="Book Now" class="submitbutton1"></a>
+ 
 </pre>
        </div> 
     </div>
@@ -87,22 +88,6 @@
     <textarea name="text" placeholder="......Give Review......" class="textare"></textarea>
 
 
-    <div class="contactcontainer" id="contactcontainer">
-        <div class="formcontainer">
-          <p class="containerheader">Fill the form</p><hr color="black">
-          <form action="" method="post">
-              <p><label>Name*:</label><input type="text" name="name" required class="textare form1"></p>
-              <p><label>Email*:</label><input type="email" name="email" required class="textare form2"></p>
-              <p><label>Number*:</label><input type="number" name="number" required class="textare form3"></p>
-              <p><label>Address*:</label><input type="text" name="address" required class="textare form4"></p>
-              <p><label>Citizenship photo*:<input type="file" name="ctz" required class=" form5"></label></p>
-              <p><label>license photo*:<input type="file" name="lic" required class=" form6"></label></p>
-  
-              <input type="submit" value="Submit" class="submitbutton">
-          </form>
-        </div>
-     </div>
-
      <footer>
         <div class="footer_container">
             <div class="footer">
@@ -112,10 +97,11 @@
             <div class="footer">
                 <p class="footer_topic">LINKS</p>
                 <hr color="white" width="150">
-                <a href="index.jsp"><p class="f1">Home</p></a>
-                <a href="vehicle.jsp"><p class="f2">Vehicle</p></a>
+               <a href="index.jsp"><p class="f1">Home</p></a>
+                <a href="lend.jsp"><p class="f2">lend</p></a>
                 <a href="contact.jsp"><p class="f3">Contact Us</p></a>
-                <a href="lend.jsp"><p class="f4">Lend</p></a>
+                <a href="allvehicle.jsp"><p class="f2">All vehicle</p></a>
+                <a href="logout.jsp"><p class="f4">logout</p></a>
     
             </div>
            </div>

@@ -18,6 +18,7 @@
               <li><a href="index.jsp" class="links">Home</a></li>
               <li><a href="lend.jsp" class="links">Lend</a></li>
               <li><a href="contact.jsp" class="links">Contact Us</a></li>
+              <li><a href="allvehicle.jsp" class="links">All Vehicles</a></li>
               <li><a href="login.jsp" class="links">Log in</a></li>
           </ul>
       </nav>
@@ -48,6 +49,21 @@
                         </div>
                 </div>
             </div>
+             <div class="form_container">
+                <div >
+                    <p class="gap">Vehicle Name</p>
+                    <div class="form_field">
+                        <input type="text" name="vehiclename">
+                    </div>
+                </div>
+                <div >
+                        <p class="gap">Vehicle Status</p>
+
+                        <div class="form_field">
+                            <input type="text" name="vehiclestatus" >
+                        </div>
+                </div>
+            </div>
             <div class="form_container">
                 <div >
                     <p class="gap">Phone number</p>
@@ -55,6 +71,7 @@
                         <input type="tel" name="p_number" >
                     </div>
                 </div>
+                
                 <div >
                         <p class="gap">Current location</p>
                         <div class="form_field">
@@ -130,10 +147,18 @@
                         </div>
                 </div>
             </div>
+                  <div >
+                <p class="gap">Vehicle Details</p>
+                <div class="form_field">
+                    <input type="text" name="vehicle_details">
+                </div>
+        </div>
+            
             <div class="submit_container">
                 <input type="reset" value="Cancel" name="cancel" class="cancel">
                 <input type="submit" value="Submit" name="submit" class="submit">
             </div>
+       
         </form>
     </div>
 
@@ -147,10 +172,11 @@
             <div class="footer">
                 <p class="footer_topic">LINKS</p>
                 <hr color="white" width="150">
-                <a href="index.jsp"><p class="f1">Home</p></a>
+               <a href="index.jsp"><p class="f1">Home</p></a>
                 <a href="lend.jsp"><p class="f2">lend</p></a>
                 <a href="contact.jsp"><p class="f3">Contact Us</p></a>
-                <a href="login.jsp"><p class="f4">login</p></a>
+                <a href="allvehicle.jsp"><p class="f2">All vehicle</p></a>
+                <a href="logout.jsp"><p class="f4">logout</p></a>
             </div>
            </div>
            <div class="footer1">

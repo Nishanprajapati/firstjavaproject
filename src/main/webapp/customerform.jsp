@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Form</title>
     <link rel="stylesheet" href="css/styleecontact.css">
     <script src="https://kit.fontawesome.com/3a36052df8.js" crossorigin="anonymous"></script>
 </head>
@@ -30,14 +31,16 @@
   </header>
    <div class="contactcontainer">
       <div class="formcontainer">
-        <p class="containerheader"> Contact Us</p><hr color="black">
+        <p class="containerheader">Fill the form</p><hr color="black">
         <form action="" method="post">
             <p><label>Name*:</label><input type="text" name="name" required class="textare form1"></p>
             <p><label>Email*:</label><input type="email" name="email" required class="textare form2"></p>
             <p><label>Number*:</label><input type="number" name="number" required class="textare form3"></p>
             <p><label>Address*:</label><input type="text" name="address" required class="textare form4"></p>
-            <p><textarea name="text" placeholder="    Say Something.... " class="textaree form5"></textarea></p>
-            <input type="Submit" value="Send Message >>" class="submitbutton">
+            <p><label>Citizenship photo*:<input type="file" name="ctz" required class=" form5"></label></p>
+            <p><label>license photo*:<input type="file" name="lic" required class=" form6"></label></p>
+
+            <input type="Submit" value="Submit" class="submitbutton">
         </form>
       </div>
    </div>

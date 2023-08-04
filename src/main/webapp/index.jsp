@@ -39,6 +39,7 @@
               <li><a href="index.jsp" class="links">Home</a></li>
               <li><a href="lend.jsp" class="links">Lend</a></li>
               <li><a href="contact.jsp" class="links">Contact Us</a></li>
+              <li><a href="allvehicle.jsp" class="links">All Vehicles</a></li>
               <li style="z-index:100"><a href="logout.jsp" class="links">Log Out</a></li>
 
           </ul>
@@ -148,22 +149,26 @@
             if(!listVendors.isEmpty()){%>             
             
              <%for(Vendor vendor:listVendors){%> 
+           
+           <a href="vehicle.jsp" style="text-decoration:none;  color:black">
             <div class="vehicle_view">
                 <div class="vehicle_img_container">
-                    <a href="vehicle.jsp"><img src="VendorImage?vendor_id=<%=vendor.getId() %>" alt="" class="vehicle_image"></a>
+                    <img src="VendorImage?vendor_id=<%=vendor.getId() %>" alt="" class="vehicle_image">
                 </div>
                 <div class="vehicle_detail_container">
                     <div class="details_view">
                         <p class="detail_head"><%=vendor.getName() %></p>
                         <hr class="hrline_detail">
-                        <p class="detail_body">Harley Davidson livewire</p>
-                        <p class="detail_body">Location:Madhyapur Thimi,Bhaktapur</p>
+                        <p class="detail_body"><%=vendor.getVehicleName() %></p>
+                        <p class="detail_body">Location:<%=vendor.getCurrentLocation() %></p>
                         <p class="detail_body">Rating: 5 <i class='bx bxs-star' ></i></p>
-                        <p class="detail_body">Price:Rs 1500 /- per day</p>
-                        <p class="detail_status">like new</p>
+                        <p class="detail_body">Price:Rs<%=vendor.getPerDay() %> per day</p>
+                        <p class="detail_body">Vehicle Owner=<%=vendor.getName() %></p>
+                        <p class="detail_status"><%=vendor.getVehicleStatus() %></p>
                     </div>
                 </div>
             </div>
+            </a>
             <%}%> 
          <%}%> 
          
@@ -175,7 +180,8 @@
         </div>
         <hr>
     </div>
-
+	
+	 
 
     <div class="vehicles">
         <span class="vehicle_head">Cars</span>
@@ -183,7 +189,7 @@
         <div class="vehicles_container">
             <div class="vehicle_view">
                 <div class="vehicle_img_container">
-                    <img src="images/carimg.jpg" alt="" class="vehicle_image">
+                    <a href="vehicle.jsp" ><img src="images/carimg.jpg" alt="" class="vehicle_image"></a>
                 </div>
                 <div class="vehicle_detail_container">
                     <div class="details_view">
@@ -200,7 +206,7 @@
             </div>
             <div class="vehicle_view">
                 <div class="vehicle_img_container">
-                    <img src="images/carimg.jpg" alt="" class="vehicle_image">
+                    <a href="vehicle.jsp" ><img src="images/carimg.jpg" alt="" class="vehicle_image"></a>
                 </div>
                 <div>
                     <div class="details_view">
@@ -217,7 +223,7 @@
             </div>
             <div class="vehicle_view">
                 <div class="vehicle_img_container">
-                    <img src="images/carimg.jpg" alt="" class="vehicle_image">
+                    <a href="vehicle.jsp" ><img src="images/carimg.jpg" alt="" class="vehicle_image"></a>
                 </div>
                 <div>
                     <div class="details_view">
@@ -281,7 +287,8 @@
                 <a href="index.jsp"><p class="f1">Home</p></a>
                 <a href="lend.jsp"><p class="f2">lend</p></a>
                 <a href="contact.jsp"><p class="f3">Contact Us</p></a>
-                <a href="login.jsp"><p class="f4">login</p></a>
+                <a href="allvehicle.jsp"><p class="f2">All vehicle</p></a>
+                <a href="logout.jsp"><p class="f4">logout</p></a>
             </div>
            </div>
            <div class="footer1">
