@@ -32,7 +32,7 @@
    <div class="contactcontainer">
       <div class="formcontainer">
         <p class="containerheader">Fill the form</p><hr color="black">
-        <form action="" method="post">
+        <form action="customerformservlet" method="post" enctype="multipart/form-data">
             <p><label>Name*:</label><input type="text" name="name" required class="textare form1"></p>
             <p><label>Email*:</label><input type="email" name="email" required class="textare form2"></p>
             <p><label>Number*:</label><input type="number" name="number" required class="textare form3"></p>
