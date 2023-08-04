@@ -46,6 +46,8 @@ public class lendservlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String name=request.getParameter("name");
 		String email=request.getParameter("email");
+		String vehicleName=request.getParameter("vehiclename");
+		String vehicleStatus=request.getParameter("vehiclestatus");
 		String phoneno=request.getParameter("p_number");
 		String currentlocation=request.getParameter("c_location");
 		String pickup=request.getParameter("p_location");
@@ -54,7 +56,7 @@ public class lendservlet extends HttpServlet {
 		String vtype=request.getParameter("v_type");
 		String perday=request.getParameter("p_day");
 		String perhour=request.getParameter("p_hour");
-		System.out.println("name:"+name);
+		String vehicleDetails=request.getParameter("vehicle_details");
 		
 
 		  //get image
@@ -87,7 +89,7 @@ public class lendservlet extends HttpServlet {
 //		byte[] i_image_bytes=i_image.readAllBytes();
 		
 		
-		Vendor vendor=new Vendor(name,email,phoneno,currentlocation,pickup,dropoff,licenseplateno,vtype,perday,perhour,vehicleInputStream,citizenshipInputStream,insuranceInputStream);
+		Vendor vendor=new Vendor(name,email,vehicleName,vehicleStatus,phoneno,currentlocation,pickup,dropoff,licenseplateno,vtype,perday,perhour,vehicleInputStream,citizenshipInputStream,insuranceInputStream,vehicleDetails);
 		VendorService vendorService=new VendorService();
 		String result = vendorService.saveVendor(vendor);
 		

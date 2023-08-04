@@ -5,7 +5,7 @@ import java.sql.Blob;
 
 public class Vendor {
 	private int id;
-	private String name,email,phoneNo,currentLocation,pickUp,dropOff,licencePlateNo,vehicleType,perDay,perHour;
+	private String name,email,vehicleName,vehicleStatus,phoneNo,currentLocation,pickUp,dropOff,licencePlateNo,vehicleType,perDay,perHour,vehicleDetails;
 	private InputStream vehicleImage,citizenshipImage,insuranceImage;
 	
 	
@@ -13,12 +13,14 @@ public class Vendor {
 	public Vendor() {
 		super();
 	}
-	public Vendor(String name, String email, String phoneNo, String currentLocation, String pickUp, String dropOff,
+	public Vendor(String name, String email,String vehicleName,String vehicleStatus, String phoneNo, String currentLocation, String pickUp, String dropOff,
 			String licencePlateNo, String veghicleType, String perDay, String perHour, InputStream  vehicleImage,
-			InputStream  citizenshipImage, InputStream  insuranceImage) {
+			InputStream  citizenshipImage, InputStream  insuranceImage,String vehicleDetails) {
 		super();
 		this.name = name;
 		this.email = email;
+		this.vehicleName=vehicleName;
+		this.vehicleStatus=vehicleStatus;
 		this.phoneNo = phoneNo;
 		this.currentLocation = currentLocation;
 		this.pickUp = pickUp;
@@ -30,15 +32,18 @@ public class Vendor {
 		this.vehicleImage = vehicleImage;
 		this.citizenshipImage = citizenshipImage;
 		this.insuranceImage = insuranceImage;
+		this.vehicleDetails=vehicleDetails;
 	}
 	
-	public Vendor(int id, String name, String email, String phoneNo, String currentLocation, String pickUp,
+	public Vendor(int id, String name, String email,String vehicleName,String vehicleStatus, String phoneNo, String currentLocation, String pickUp,
 			String dropOff, String licencePlateNo, String vehicleType, String perDay, String perHour,
-			InputStream vehicleImage, InputStream citizenshipImage, InputStream insuranceImage) {
+			InputStream vehicleImage, InputStream citizenshipImage, InputStream insuranceImage,String vehicleDetails) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
+		this.vehicleName=vehicleName;
+		this.vehicleStatus=vehicleStatus;
 		this.phoneNo = phoneNo;
 		this.currentLocation = currentLocation;
 		this.pickUp = pickUp;
@@ -50,6 +55,7 @@ public class Vendor {
 		this.vehicleImage = vehicleImage;
 		this.citizenshipImage = citizenshipImage;
 		this.insuranceImage = insuranceImage;
+		this.vehicleDetails=vehicleDetails;
 	}
 	public int getId() {
 		return id;
@@ -68,6 +74,18 @@ public class Vendor {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public String getVehicleName() {
+		return vehicleName;
+	}
+	public void setVehicleName(String vehicleName) {
+		this.vehicleName = vehicleName;
+	}
+	public String getVehicleStatus() {
+		return vehicleStatus;
+	}
+	public void setVehicleStatus(String vehicleStatus) {
+		this.vehicleStatus = vehicleStatus;
 	}
 	public String getPhoneNo() {
 		return phoneNo;
@@ -117,26 +135,31 @@ public class Vendor {
 	public void setPerHour(String perHour) {
 		this.perHour = perHour;
 	}
-	public InputStream  getVehicleImage() {
+	public String getVehicleDetails() {
+		return vehicleDetails;
+	}
+	public void setVehicleDetails(String vehicleDetails) {
+		this.vehicleDetails = vehicleDetails;
+	}
+	public InputStream getVehicleImage() {
 		return vehicleImage;
 	}
-	public void setVehicleImage(InputStream  vehicleImage) {
+	public void setVehicleImage(InputStream vehicleImage) {
 		this.vehicleImage = vehicleImage;
 	}
-	public InputStream  getCitizenshipImage() {
+	public InputStream getCitizenshipImage() {
 		return citizenshipImage;
 	}
-	public void setCitizenshipImage(InputStream  citizenshipImage) {
+	public void setCitizenshipImage(InputStream citizenshipImage) {
 		this.citizenshipImage = citizenshipImage;
 	}
-	public InputStream  getInsuranceImage() {
+	public InputStream getInsuranceImage() {
 		return insuranceImage;
 	}
-	public void setInsuranceImage(InputStream  insuranceImage) {
+	public void setInsuranceImage(InputStream insuranceImage) {
 		this.insuranceImage = insuranceImage;
 	}
 	
-
 	
 	
 
