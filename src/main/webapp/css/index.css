@@ -211,13 +211,24 @@
     margin: 50px 50px;
 }
 .vehicles_container{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-content: space-evenly;
+   display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) );
+    overflow-x:scroll;
+    overflow-y:hidden;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
     margin-top: 15px;
     margin-bottom: 15px;
+    padding: 10px 3.3%;
     
 }
+::-webkit-scrollbar {
+    display: none;
+  }
 .vehicle_view{
     display: grid;
     grid-template-columns: auto auto;

@@ -28,8 +28,7 @@ public class CustomerService {
 		
 		String result = customerDao.bookVehicle(customer);
 		if (result.equals("success")) {
-			
-			EmailSender.bookEmail(result);
+			EmailSender.bookEmail(customer.getEmail());
 		}
 		
 		return result;

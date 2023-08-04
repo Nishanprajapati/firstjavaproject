@@ -157,7 +157,7 @@
                 </div>
                 <div class="vehicle_detail_container">
                     <div class="details_view">
-                        <p class="detail_head"><%=vendor.getName() %></p>
+                        <p class="detail_head"><%=vendor.getVehicleName() %></p>
                         <hr class="hrline_detail">
                         <p class="detail_body"><%=vendor.getVehicleName() %></p>
                         <p class="detail_body">Location:<%=vendor.getCurrentLocation() %></p>

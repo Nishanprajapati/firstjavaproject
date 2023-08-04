@@ -18,7 +18,7 @@ public class EmailSender {
    
     public static void bookEmail(String useremail){
         // Recipient's email ID needs to be mentioned.
-       String to ="abinash201603@ncit.edu.np";
+       String to =useremail;
 
        // Sender's email ID needs to be mentioned
        String from = "info.rideease@gmail.com";
@@ -31,8 +31,9 @@ public class EmailSender {
 
        // Setup mail server
        properties.put("mail.smtp.host", host);
-       properties.put("mail.smtp.port", "587");
-       properties.put("mail.smtp.ssl.enable", "false");
+       properties.put("mail.smtp.port", "465");
+       properties.put("mail.smtp.ssl.enable", "true");
+       properties.put("mail.smtp.ssl.protocols", "TLSv1.2"); // Use TLSv1.2 or TLSv1.3
        properties.put("mail.smtp.auth", "true");
 
        // Get the Session object.// and pass username and password
@@ -41,7 +42,7 @@ public class EmailSender {
            @Override
            protected PasswordAuthentication getPasswordAuthentication() {
 
-               return new PasswordAuthentication("info.rideease@gmail.com", "rideease123");
+               return new PasswordAuthentication("info.rideease@gmail.com", "msdvkicukhtdsljg");
 
            }
 
@@ -65,10 +66,11 @@ public class EmailSender {
 
            // actual message
            message.setContent(
-             "<h4>Dear,abi"
-                     +"<br>Thank you for choosing RideEase made by ANA .Now welcome to Rideease family."
-                  
-                
+             "<h4>Dear,Customer"
+                     +"<br>Thank you for choosing RideEase made by ANA . welcome to Rideease family."
+                     + "<br>Your vehicle has been booked . please go to the vehicle location to take vehicle"
+                     + "<br><br>"
+                     + "<br> Enjoy your ride"
                      + "<br> Regards,<br>RideEase</h4>",
             "text/html"
            
