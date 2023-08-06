@@ -34,7 +34,7 @@
    
    
     <div class="div">
-        <img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/101487/classic-350-right-front-three-quarter-6.jpeg?isig=0&q=80" alt="this is bike" class="renf" >
+       <div class="divv"><img src="images/royal.jpg" alt="this is bike" class="renf" ></div>
        <div class="div1">
 <pre>
 

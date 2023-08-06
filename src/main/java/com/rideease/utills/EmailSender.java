@@ -68,7 +68,7 @@ public class EmailSender {
            message.setContent(
              "<h4>Dear,Customer"
                      +"<br>Thank you for choosing RideEase made by ANA . welcome to Rideease family."
-                     + "<br>Your vehicle has been booked . please go to the vehicle location to take vehicle"
+                     + "<br>The vehicle has been booked . please go to the vehicle location to take vehicle"
                      + "<br><br>"
                      + "<br> Enjoy your ride"
                      + "<br> Regards,<br>RideEase</h4>",

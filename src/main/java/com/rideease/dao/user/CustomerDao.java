@@ -25,7 +25,7 @@ public class CustomerDao {
 		   ps.setString(4,customer.getAddress());
 		   
 		   ps.setBlob(5,customer.getCitizenshipPhoto());
-		   ps.setBlob(6,customer.getCitizenshipPhoto());
+		   ps.setBlob(6,customer.getLicensePhoto());
 		   
 	       ps.executeUpdate();
 		} catch (SQLException e) {

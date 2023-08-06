@@ -1,5 +1,5 @@
 *{
-     /*border: 1px solid red; */ 
+    /*border: 1px solid red;*/ 
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -87,6 +87,7 @@
     list-style-type: none;
 }
 .renf{
+	padding:5px 5px 5px 5px;
     /* height: 350px; */
     width: 100%;
 }
@@ -108,6 +109,9 @@
     display:grid;
     grid-template-columns: 50% 50%;
 }
+.divv{
+	padding:3px 3px 3px 3px;
+}
 .bike_description{
     padding:30px 40px;
     margin-inline:50px;
@@ -120,6 +124,7 @@
 
 }
 .div1{
+	margin-left:10px;
     margin-right: 0%;
     padding-right: 10px;
     text-align:left;

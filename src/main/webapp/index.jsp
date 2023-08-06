@@ -62,10 +62,12 @@
                    <span>RideEase</span> provides a user-friendly interface that allows customers to easily book a vehicle of their choice for their desired duration.
                 </p>
             </div>
-            <div>
+            <div class="explore">
+            <a href="allvehicle.jsp" style="text-decoration:none; color:white">
                 <button class="explore_button">
-                    Explore Vehicles<i class='bx bx-right-arrow-alt'></i>
+                   Explore Vehicles<i class='bx bx-right-arrow-alt'></i>
                 </button>
+                </a>
             </div>
        </div>
        <div class="blue_box_container" >
@@ -163,7 +165,7 @@
                         <p class="detail_body">Location:<%=vendor.getCurrentLocation() %></p>
                         <p class="detail_body">Rating: 5 <i class='bx bxs-star' ></i></p>
                         <p class="detail_body">Price:Rs<%=vendor.getPerDay() %> per day</p>
-                        <p class="detail_body">Vehicle Owner=<%=vendor.getName() %></p>
+                        <p class="detail_body">Vehicle Owner:<%=vendor.getName() %></p>
                         <p class="detail_status"><%=vendor.getVehicleStatus() %></p>
                     </div>
                 </div>
@@ -187,13 +189,14 @@
         <span class="vehicle_head">Cars</span>
         <hr>
         <div class="vehicles_container">
+        <a href="vehicle.jsp" style="text-decoration:none;  color:black" >
             <div class="vehicle_view">
                 <div class="vehicle_img_container">
-                    <a href="vehicle.jsp" ><img src="images/carimg.jpg" alt="" class="vehicle_image"></a>
+                    <img src="images/carimg.jpg" alt="" class="vehicle_image">
                 </div>
                 <div class="vehicle_detail_container">
                     <div class="details_view">
-                        <p class="detail_head">Harley davidson</p>
+                        <p class="detail_head">lamborghini</p>
                         <hr class="hrline_detail">
                         <p class="detail_body">Harley Davidson livewire</p>
                         <p class="detail_body">Location:Madhyapur Thimi,Bhaktapur</p>
@@ -202,15 +205,17 @@
                         <p class="detail_status">like new</p>
                     </div>
                 </div>
-
-            </div>
+               </div>
+                </a>
+                
+                  <a href="vehicle.jsp" style="text-decoration:none;  color:black">
             <div class="vehicle_view">
                 <div class="vehicle_img_container">
-                    <a href="vehicle.jsp" ><img src="images/carimg.jpg" alt="" class="vehicle_image"></a>
+                    <img src="images/car.png" alt="" class="vehicle_image">
                 </div>
-                <div>
+                <div class="vehicle_detail_container">
                     <div class="details_view">
-                        <p class="detail_head">Harley davidson</p>
+                        <p class="detail_head">Mercedes</p>
                         <hr class="hrline_detail">
                         <p class="detail_body">Harley Davidson livewire</p>
                         <p class="detail_body">Location:Madhyapur Thimi,Bhaktapur</p>
@@ -219,15 +224,17 @@
                         <p class="detail_status">like new</p>
                     </div>
                 </div>
-
-            </div>
+               </div>
+                </a>
+                
+                  <a href="vehicle.jsp" style="text-decoration:none;  color:black">
             <div class="vehicle_view">
                 <div class="vehicle_img_container">
-                    <a href="vehicle.jsp" ><img src="images/carimg.jpg" alt="" class="vehicle_image"></a>
+                    <img src="images/car.png" alt="" class="vehicle_image">
                 </div>
-                <div>
+                <div class="vehicle_detail_container">
                     <div class="details_view">
-                        <p class="detail_head">Harley davidson</p>
+                        <p class="detail_head">Mercedes</p>
                         <hr class="hrline_detail">
                         <p class="detail_body">Harley Davidson livewire</p>
                         <p class="detail_body">Location:Madhyapur Thimi,Bhaktapur</p>
@@ -236,8 +243,47 @@
                         <p class="detail_status">like new</p>
                     </div>
                 </div>
-
-            </div>
+               </div>
+                </a>
+                
+                  <a href="vehicle.jsp" style="text-decoration:none;  color:black">
+            <div class="vehicle_view">
+                <div class="vehicle_img_container">
+                    <img src="images/carimg.jpg" alt="" class="vehicle_image">
+                </div>
+                <div class="vehicle_detail_container">
+                    <div class="details_view">
+                        <p class="detail_head">lamborghini</p>
+                        <hr class="hrline_detail">
+                        <p class="detail_body">Harley Davidson livewire</p>
+                        <p class="detail_body">Location:Madhyapur Thimi,Bhaktapur</p>
+                        <p class="detail_body">Rating: 5 <i class='bx bxs-star' ></i></p>
+                        <p class="detail_body">Price:Rs 1500 /- per day</p>
+                        <p class="detail_status">like new</p>
+                    </div>
+                </div>
+               </div>
+                </a>
+                
+                  <a href="vehicle.jsp" style="text-decoration:none;  color:black">
+            <div class="vehicle_view">
+                <div class="vehicle_img_container">
+                    <img src="images/car.png" alt="" class="vehicle_image">
+                </div>
+                <div class="vehicle_detail_container">
+                    <div class="details_view">
+                        <p class="detail_head">Mercedes</p>
+                        <hr class="hrline_detail">
+                        <p class="detail_body">Harley Davidson livewire</p>
+                        <p class="detail_body">Location:Madhyapur Thimi,Bhaktapur</p>
+                        <p class="detail_body">Rating: 5 <i class='bx bxs-star' ></i></p>
+                        <p class="detail_body">Price:Rs 1500 /- per day</p>
+                        <p class="detail_status">like new</p>
+                    </div>
+                </div>
+               </div>
+                </a>
+           
            
         </div>
         <hr>

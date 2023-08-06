@@ -64,6 +64,6 @@
             <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
             </p>
        </div>
-       <p class="para">Already have and account?<a href="#">Login here</a></p>
+       <p class="para">Already have and account?<a href="login.jsp">Login here</a></p>
 </body>
 </html>
